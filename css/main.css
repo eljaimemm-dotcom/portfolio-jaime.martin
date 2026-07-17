@@ -284,8 +284,8 @@ li { list-style: none; }
 @keyframes fade-up {
     from {
         opacity: 0;
-        transform: translateY(1.25rem);
-         filter:blur(.25rem);
+        transform: translateY(1rem);
+         filter:blur(.15rem);
     }
     to {
         opacity: 1;
@@ -297,7 +297,7 @@ li { list-style: none; }
 @keyframes fade {
     from {
         opacity: 0;
-        filter:blur(.25rem);
+        filter:blur(.15rem);
     }
     to {
         opacity: 1;
@@ -308,8 +308,8 @@ li { list-style: none; }
 @keyframes selected-entry{
     from{
         opacity:0;
-        scale: 0.5;
-        filter:blur(.25rem);
+        scale: 0.9;
+        filter:blur(.15rem);
     }
     to{
         opacity:1;
@@ -321,8 +321,8 @@ li { list-style: none; }
 @keyframes left-entry{
     from{
         opacity:0;
-        transform: translateX(-4rem);
-        filter:blur(.25rem);
+        transform: translateX(-1rem);
+        filter:blur(.15rem);
     }
     to{
         opacity:1;
@@ -334,8 +334,8 @@ li { list-style: none; }
 @keyframes right-entry{
     from{
         opacity:0;
-        transform: translateX(4rem);
-        filter:blur(.25rem);
+        transform: translateX(1rem);
+        filter:blur(.15rem);
     }
     to{
         opacity:1;
@@ -793,7 +793,7 @@ li { list-style: none; }
 
     animation: left-entry ;
     animation-timeline: view();
-    animation-range: entry 10% cover 25%;
+    animation-range: entry 5% cover 10%;
     animation-fill-mode: both;
 }
 
@@ -835,7 +835,7 @@ li { list-style: none; }
     & a {
         animation: left-entry ;
         animation-timeline: view();
-        animation-range: entry 10% cover 25%;
+        animation-range: entry 5% cover 10%;
         animation-fill-mode: both;
     }
 }
@@ -848,7 +848,7 @@ li { list-style: none; }
 
     animation: left-entry ;
     animation-timeline: view();
-    animation-range: entry 10% cover 25%;
+    animation-range: entry 5% cover 10%;
     animation-fill-mode: both;
 }
 
@@ -860,7 +860,7 @@ li { list-style: none; }
 
     animation: left-entry ;
     animation-timeline: view();
-    animation-range: entry 10% cover 30%;
+    animation-range: entry 5% cover 10%;
     animation-fill-mode: both;
 }
 
@@ -877,7 +877,7 @@ li { list-style: none; }
 
     animation: left-entry ;
     animation-timeline: view();
-    animation-range: entry 10% cover 30%;
+    animation-range: entry 5% cover 10%;
     animation-fill-mode: both;
 }
 
