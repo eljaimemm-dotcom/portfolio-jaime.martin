@@ -349,7 +349,7 @@ li { list-style: none; }
 }
 
 .animate-visible {
-    animation: fade 3s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: fade 2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .animate-hidden-up {
@@ -357,13 +357,13 @@ li { list-style: none; }
 }
 
 .animate-visible-up {
-    animation: fade-up 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: fade-up 2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .animate-delay-1 { animation-delay: 0s; }
 .animate-delay-2 { animation-delay: .5s; }
 .animate-delay-3 { animation-delay: 1s; }
-.animate-delay-4 { animation-delay: 2s; }
+.animate-delay-4 { animation-delay: 0s; }
 
 /* =========================================
    HEADER
@@ -790,6 +790,11 @@ li { list-style: none; }
     align-items: center;
     gap: var(--space-4);
     margin: 0 0 var(--space-12);
+
+    animation: left-entry ;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+    animation-fill-mode: both;
 }
 
 .selected__intro h2 {
@@ -831,6 +836,7 @@ li { list-style: none; }
         animation: left-entry ;
         animation-timeline: view();
         animation-range: entry 10% cover 25%;
+        animation-fill-mode: both;
     }
 }
 
@@ -843,6 +849,7 @@ li { list-style: none; }
     animation: left-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 25%;
+    animation-fill-mode: both;
 }
 
 .selected__text p {
@@ -854,6 +861,7 @@ li { list-style: none; }
     animation: left-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 }
 
 .selected__text--active {
@@ -870,6 +878,7 @@ li { list-style: none; }
     animation: left-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 }
 
 .selected__dot {
@@ -1004,6 +1013,7 @@ li { list-style: none; }
         animation: left-entry ;
         animation-timeline: view();
         animation-range: entry 10% cover 30%;
+        animation-fill-mode: both;
     }
 
     & p {
@@ -1014,6 +1024,7 @@ li { list-style: none; }
         animation: left-entry ;
         animation-timeline: view();
         animation-range: entry 10% cover 30%;
+        animation-fill-mode: both;
     }
 }
 
@@ -1030,6 +1041,7 @@ li { list-style: none; }
         animation: left-entry ;
         animation-timeline: view();
         animation-range: entry 10% cover 30%;
+        animation-fill-mode: both;
     }
 }
 
@@ -1058,6 +1070,7 @@ li { list-style: none; }
     animation: right-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 
     @media (width <= 48rem) {
         overflow-x: auto;
@@ -1133,6 +1146,7 @@ li { list-style: none; }
     animation: right-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 
     &:last-child {
         border-bottom: none;
@@ -1193,6 +1207,7 @@ li { list-style: none; }
     animation: fade ;
     animation-timeline: view();
     animation-range: entry 1% cover 20%;
+    animation-fill-mode: both;
 
     -webkit-mask-image: linear-gradient(
         to right,
@@ -1286,6 +1301,7 @@ li { list-style: none; }
         animation: left-entry ;
         animation-timeline: view();
         animation-range: entry 10% cover 30%;
+        animation-fill-mode: both;
     }
 }
 
@@ -1293,6 +1309,11 @@ li { list-style: none; }
     display: flex;
     align-items: center;
     gap: var(--space-4);
+
+    animation: left-entry ;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+    animation-fill-mode: both;
 
     & h2 {
         font: var(--text-xs);
@@ -1305,6 +1326,7 @@ li { list-style: none; }
     animation: left-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 
     & span {
         font: var(--text-lg);
@@ -1319,6 +1341,7 @@ li { list-style: none; }
     animation: left-entry ;
     animation-timeline: view();
     animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 }
 
 /* =========================================
@@ -1333,6 +1356,7 @@ li { list-style: none; }
     animation: selected-entry ;
     animation-timeline: view();
     animation-range: entry 5% cover 10%;
+    animation-fill-mode: both;
 }
 
 .cs-back {
@@ -1499,7 +1523,7 @@ li { list-style: none; }
     
     animation: fade 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
     animation-delay: .6s;
-
+    
 
     & img {
         width: 100%;
