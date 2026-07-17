@@ -1,0 +1,417 @@
+<!--
+Descripcion: Este archivo contiene el codigo html del proyecto Backoffice 4.0
+Estructura general:
+-Header
+-Hero
+-Context
+-Problem
+-Process
+-Design Decisions
+-Results
+-Reflection
+-Navigation between projects
+-Footer
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Backoffice 4.0</title>
+
+    <!-- Links y JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+    <link rel='stylesheet' href='css/main.css'>
+    <script src="js/main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Backoffice 4.0 — UX/UI Redesign for Real-World Use | Jaime Martin" />
+    <meta name="description" content="UX/UI redesign of a backoffice system optimized for real-world conditions, improving usability, clarity, and efficiency in high-pressure environments." />
+    <meta name="author" content="Jaime Martin" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="og:title" content="Backoffice 4.0 — UX/UI Redesign for Real-World Use | Jaime Martin" />
+    <meta property="og:description" content="UX/UI redesign of a backoffice system optimized for real-world conditions, improving usability, clarity, and efficiency in high-pressure environments." />
+    <meta property="og:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__backoffice.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="twitter:title" content="Backoffice 4.0 — UX/UI Redesign for Real-World Use | Jaime Martin" />
+    <meta property="twitter:description" content="UX/UI redesign of a backoffice system optimized for real-world conditions, improving usability, clarity, and efficiency in high-pressure environments." />
+    <meta property="twitter:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__backoffice.jpg" />
+
+</head>
+<body class="case-study-page">
+ 
+    <!-- ======================================================= -->
+    <!-- HEADER                                                  -->
+    <!-- ======================================================= -->
+    <header class="header header--scrolled" id="cs-header">
+        <div class="header__brand">
+            <a href="index.html" title="Go back to the main page" class="cs-back">
+                <i class="ri-arrow-left-line"></i>
+                <span>JAIME MARTIN</span>
+            </a>
+        </div>
+        <div class="header__content">
+            <a class="cs-header__label" href="#" title="Go to the top">Backoffice 4.0</a>
+        </div>
+    </header>
+  
+    <main>
+ 
+        <!-- ======================================================= -->
+        <!-- HERO                                                    -->
+        <!-- ======================================================= -->
+        <section class="cs-hero">
+ 
+            <!-- Categorias -->
+            <div class="cs-hero__meta">
+                <div class="cs-hero__tags">
+                    <span class="cs-tag">Device Adaptation</span>
+                    <span class="cs-tag">Payment Terminals</span>
+                    <span class="cs-tag">UX/UI Redesign</span>
+                </div>
+            </div>
+ 
+            <!-- Título principal -->
+            <h1 class="cs-hero__title">
+                <span class="cs-hero__title-line cs-hero__title-line--1">Backoffice 4.0</span>
+                <span class="cs-hero__title-line cs-hero__title-line--2">Designing for<br><em>real-world conditions.</em></span>
+            </h1>
+ 
+            <!-- Rol + año -->
+            <div class="cs-hero__info">
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">ROLE</span>
+                    <span class="cs-hero__info-value">UX/UI Designer</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">YEAR</span>
+                    <span class="cs-hero__info-value">2024</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">COMPANY</span>
+                    <span class="cs-hero__info-value">Consware</span>
+                </div>
+            </div>
+ 
+             <!-- Imagen hero -->
+            <figure class="cs-hero__cover">
+                <picture>
+                    <source srcset="media/backoffice__banner.webp" type="image/webp">
+                    <img
+                        src="media/backoffice__banner.jpg"
+                        alt="Backoffice 4.0 — Backoffice 4.0 dashboard showing payment terminal interface with more ui screens floating around"
+                    
+                        loading="eager"
+                    >
+                </picture>
+            </figure>
+ 
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- CONTEXTO                                                -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-context">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Context</span>
+                    <span class="cs-section__number">01</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">A tool used in real operational environments</h2>
+                    <p class="cs-lead">This project focused on redesigning a mobile application used by gas station attendants in Colombia to manage sales, payments, and operational tasks.</p>
+                    <p>The app runs on dataphones — devices with limited performance and small screens — and is used in fast-paced environments where efficiency and clarity are essential. Users rely on this tool throughout their daily workflow, often under challenging conditions such as direct sunlight, time pressure, and limited familiarity with digital interfaces.</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Problem                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-problem">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Problem</span>
+                    <span class="cs-section__number">02</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">The existing system was difficult to use in real-world conditions, where speed, clarity, and reliability were critical.</h2>
+                    <p class="cs-lead">The interface introduced friction instead of supporting efficient workflows</p>
+ 
+                    <!-- Cita de usuario -->
+                    <blockquote class="cs-quote">
+                        <p>“I’m not used to new technology, so I need something simple and easy to use.”</p>
+                        <cite>— Gas station attendant</cite>
+                    </blockquote>
+ 
+                    <!-- Puntos de dolor -->
+                    <div class="cs-pain-points">
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-fingerprint-line"></i></span>
+                            <h3>Small touch targets</h3>
+                            <p>Buttons and inputs were too small, making interactions difficult and error-prone on limited devices.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-sun-line"></i></span>
+                            <h3>Low visibility</h3>
+                            <p>The interface lacked proper contrast, making it hard to read under direct sunlight conditions.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-error-warning-line"></i></span>
+                            <h3>Unclear system feedback</h3>
+                            <p>Users struggled to understand system responses due to unclear states and lack of feedback.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-menu-line"></i></span>
+                            <h3>Disorganized navigation</h3>
+                            <p>Tasks and operations were poorly structured, increasing cognitive effort and slowing down workflows.</p>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+
+        <!-- Imagen ancho completo -->
+        <figure class="cs-full-image">
+            <picture>
+                <source srcset="media/backoffice__01.webp" type="image/webp">
+                <img
+                    src="media/backoffice__01.jpg"
+                    alt="Ui screens from the backoffice project before the redesign"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                >
+            </picture>
+            <figcaption>Screens before the redesign</figcaption>
+        </figure>
+ 
+        <!-- ======================================================= -->
+        <!-- Process                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-process">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Process</span>
+                    <span class="cs-section__number">03</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">From problem to structured experience</h2>
+                    
+ 
+                    <!-- Timeline -->
+                    <ol class="cs-timeline">
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Identifying real-world issues</h3>
+                                <p>The initial analysis focused on understanding how the product was used in real conditions, revealing critical usability issues in interaction, visibility, and feedback.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Understanding constraints</h3>
+                                <p>The product operated on low-performance dataphones with small screens, used by users with limited digital familiarity.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Rebuilding the design foundation</h3>
+                                <p>Before redesigning the interface, it was necessary to create a new design system. Core components such as inputs, buttons, navigation elements, and layout structures were redefined to ensure consistency, usability, and scalability across the product.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Defining usability priorities</h3>
+                                <p>The redesign focused on simplifying interactions, improving visibility, and reducing cognitive effort.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Iterating solutions</h3>
+                                <p>Interface elements were redesigned and refined through multiple iterations to ensure clarity, efficiency, and usability in real conditions.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+ 
+            </div>
+        </section>
+ 
+
+ 
+        <!-- ======================================================= -->
+        <!-- Design decisions                                        -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-decisions">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Design decisions</span>
+                    <span class="cs-section__number">04</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Turning constraints into usable solutions</h2>
+                    <p></p>
+                </div>
+ 
+            </div>
+ 
+           <!-- Grid decisions -->
+            <div class="cs-decisions-grid">
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">A</div>
+                    <h3 class="cs-decision__title">Usability under constraints</h3>
+                    <p class="cs-decision__body">The interface was optimized for small screens and challenging usage conditions. Touch targets, spacing, and input fields were redesigned to ensure accessibility and ease of use.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/backoffice__02.webp" type="image/webp">
+                            <img src="media/backoffice__02.webp" type="image/webp" alt="Back-office user interface screens before and after the redesign" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">B</div>
+                    <h3 class="cs-decision__title">Visual clarity and feedback</h3>
+                    <p class="cs-decision__body">The system lacked clear feedback, making interactions uncertain. Visual states and modals were redesigned to clearly communicate actions, errors, and system responses.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/backoffice__03.webp" type="image/webp">
+                            <img src="media/backoffice__03.jpg" alt="Back-office pop ups before and after the redesign" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">C</div>
+                    <h3 class="cs-decision__title">Structure and navigation</h3>
+                    <p class="cs-decision__body">Navigation and task organization were restructured to reduce cognitive load. Operations were grouped and prioritized, improving scanability and efficiency.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/backoffice__04.webp" type="image/webp">
+                            <img src="media/backoffice__04.jpg" alt="Back-office operations section before and after the redesign load board" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Results                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-results">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Results</span>
+                    <span class="cs-section__number">05</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">What changed</h2>
+                    <p>The redesign resulted in a more usable and efficient experience, adapted to real-world conditions and user capabilities. By prioritizing clarity and functionality, the product became easier to understand, faster to use, and more reliable in daily operations.</p>
+ 
+                    <!-- Métricas — Iconos -->
+                    <div class="cs-metrics">
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-service-line"></i></span>
+                            <span class="cs-metric__label">Interactions became more accessible and easier to execute.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-shield-check-line"></i></span>
+                            <span class="cs-metric__label">Clearer inputs and feedback minimized user mistakes.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-speed-up-line"></i></span>
+                            <span class="cs-metric__label">Better structure and navigation improved workflow efficiency.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-user-smile-line"></i></span>
+                            <span class="cs-metric__label">The system became easier to use for users with low digital familiarity.</span>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+
+            
+        </section>
+        
+ 
+        <!-- ======================================================= -->
+        <!-- Reflection                                              -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-reflection">
+            <div class="cs-section__inner">
+                
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Reflection</span>
+                    <span class="cs-section__number">06</span>
+                </div>
+                
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">What I'd do differently</h2>
+                    <p class="cs-lead">Designing for real-world conditions requires prioritizing clarity, simplicity, and performance over visual complexity.</p>
+                    <p>This project taught me to focus on functionality over aesthetics, making design decisions based on context, user capabilities, and real usage scenarios rather than visual preference.</p>
+                </div>
+                
+            </div>
+        </section>
+       
+        
+        <!-- ======================================================= -->
+        <!-- Navigation between projects                             -->
+        <!-- ======================================================= -->
+        <nav class="cs-nav" aria-label="More projects">
+            <a href="project__e-cargo.html" title="Go to previous project" class="cs-nav__prev">
+                <span class="cs-nav__direction"><i class="ri-arrow-left-line"></i>Previous</span>
+                <span class="cs-nav__project-name">E-cargo</span>
+            </a>
+            <a href="project__uninorte-pages.html" title="Go to next project" class="cs-nav__next">
+                <span class="cs-nav__direction">Next <i class="ri-arrow-right-line"></i></span>
+                <span class="cs-nav__project-name">Uninorte Program Pages</span>
+            </a>
+        </nav>
+ 
+    </main>
+ 
+    <!-- ======================================================= -->
+    <!-- Footer                                                  -->
+    <!-- ======================================================= -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Jaime Martin. All rights reserved.</p>
+    </footer>
+ 
+</body>
+</html>

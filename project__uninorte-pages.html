@@ -1,0 +1,452 @@
+<!--
+Descripcion: Este archivo contiene el codigo html del proyecto Uninorte Pages
+Estructura general:
+-Header
+-Hero
+-Context
+-Problem
+-Process
+-Design Decisions
+-Results
+-Reflection
+-Navigation between projects
+-Footer
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Uninorte Web Pages</title>
+
+    <!-- Links y JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+    <link rel='stylesheet' href='css/main.css'>
+    <script src="js/main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Uninorte Web Pages — UX/UI Academic Platform Redesign | Jaime Martin" />
+    <meta name="description" content="UX/UI redesign of academic program pages, focused on improving information hierarchy, reducing friction, and enabling faster decision-making for students." />
+    <meta name="author" content="Jaime Martin" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Uninorte Web Pages — UX/UI Academic Platform Redesign | Jaime Martin" />
+    <meta property="og:description" content="UX/UI redesign of academic program pages, focused on improving information hierarchy, reducing friction, and enabling faster decision-making for students." />
+    <meta property="og:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__uninorte.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Uninorte Web Pages — UX/UI Academic Platform Redesign | Jaime Martin" />
+    <meta property="twitter:description" content="UX/UI redesign of academic program pages, focused on improving information hierarchy, reducing friction, and enabling faster decision-making for students." />
+    <meta property="twitter:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__uninorte.jpg" />
+
+</head>
+<body class="case-study-page">
+ 
+    <!-- ======================================================= -->
+    <!-- HEADER                                                  -->
+    <!-- ======================================================= -->
+    <header class="header header--scrolled" id="cs-header">
+        <div class="header__brand">
+            <a href="index.html" title="Go back to the main page" class="cs-back">
+                <i class="ri-arrow-left-line"></i>
+                <span>JAIME MARTIN</span>
+            </a>
+        </div>
+        <div class="header__content">
+            <a class="cs-header__label" href="#" title="Go to the top">Uninorte Pages</a>
+        </div>
+    </header>
+ 
+    <main>
+ 
+        <!-- ======================================================= -->
+        <!-- HERO                                                    -->
+        <!-- ======================================================= -->
+        <section class="cs-hero">
+ 
+            <!-- Categorías -->
+            <div class="cs-hero__meta">
+                <div class="cs-hero__tags">
+                    <span class="cs-tag">Web Experience</span>
+                    <span class="cs-tag">Academic Platform</span>
+                    <span class="cs-tag">Redesign</span>
+                </div>
+            </div>
+ 
+            <!-- Título principal -->
+            <h1 class="cs-hero__title">
+                <span class="cs-hero__title-line cs-hero__title-line--1">Uninorte Pages</span>
+                <span class="cs-hero__title-line cs-hero__title-line--2">Simplifying how<br><em>students choose</em></span>
+            </h1>
+ 
+            <!-- Rol + año -->
+            <div class="cs-hero__info">
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">ROLE</span>
+                    <span class="cs-hero__info-value">UX/UI Designer</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">YEAR</span>
+                    <span class="cs-hero__info-value">2023</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">COMPANY</span>
+                    <span class="cs-hero__info-value">Universidad del Norte</span>
+                </div>
+            </div>
+ 
+            <!-- Imagen hero -->
+            <figure class="cs-hero__cover">
+                <picture>
+                    <source srcset="media/uninorte__banner.webp" type="image/webp">
+                    <img
+                        src="media/uninorte__banner.jpg"
+                        alt="Pages from the Uninorte program that display the homepage in both mobile and desktop versions"
+                        loading="eager"
+                    >
+                </picture>
+            </figure>
+ 
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- CONTEXT                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-context">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Context</span>
+                    <span class="cs-section__number">01</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">A scalable academic system</h2>
+                    <p class="cs-lead">Academic program pages at Universidad del Norte were built using Liferay, resulting in inconsistent structures across different programs.</p>
+                    <p>Each page varied in layout, hierarchy, and content organization, making it difficult for users to navigate and compare programs effectively. The goal was to design a scalable and standardized system that could work across all undergraduate and graduate programs, while adapting to Liferay’s technical constraints.</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- PROBLEM                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-problem">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Problem</span>
+                    <span class="cs-section__number">02</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Too much friction, too little clarity</h2>
+                    <p class="cs-lead">Users struggled to quickly find key information due to poor hierarchy, excessive content, and inconsistent layouts.</p>
+ 
+                    <!-- Cita de usuario -->
+                    <blockquote class="cs-quote">
+                        <p>“We needed a clearer and more consistent way to present our programs.”</p>
+                        <cite>— Communication department</cite>
+                    </blockquote>
+ 
+                    <!-- Puntos de dolor -->
+                    <div class="cs-pain-points">
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-file-list-3-line"></i></span>
+                            <h3>Overloaded hero</h3>
+                            <p>Users were exposed to a long form immediately, creating friction and cognitive overload.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-checkbox-multiple-line"></i></span>
+                            <h3>Too many primary actions</h3>
+                            <p>Multiple primary buttons competed for attention, making decision-making harder.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-eye-off-line"></i></span>
+                            <h3>Poor information hierarchy</h3>
+                            <p>Key information such as pricing was not easily accessible.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-arrow-down-line"></i></span>
+                            <h3>Excessive vertical scroll</h3>
+                            <p>Key information such as pricing was not easily accessible.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-shapes-line"></i></span>
+                            <h3>Visual inconsistency</h3>
+                            <p>Different icon styles and UI patterns created a fragmented experience.</p>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+
+        <!-- Imagen ancho completo -->
+        <figure class="cs-full-image">
+            <picture>
+                <source srcset="media/uninorte__01.webp" type="image/webp">
+                <img
+                    src="media/uninorte__01.jpg"
+                    alt="Screens from the Uninorte Academic Web Program before the redesign"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                >
+            </picture>
+            <figcaption>Screens before the redesign</figcaption>
+        </figure>
+ 
+        <!-- ======================================================= -->
+        <!-- PROCESS                                                -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-process">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Process</span>
+                    <span class="cs-section__number">03</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">From inconsistency to structured experience</h2>
+                    
+                    <!-- Timeline -->
+                    <ol class="cs-timeline">
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Understanding user priorities</h3>
+                                <p>Research showed users primarily look for: Pricing, curriculum, professors and financing</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Identifying friction points</h3>
+                                <p>Analysis revealed issues in hierarchy, navigation, and excessive scrolling.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Building a scalable structure</h3>
+                                <p>A modular layout system was defined to standardize all program pages.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Designing within constraints</h3>
+                                <p>All solutions were adapted to Liferay limitations.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Iteration & validation</h3>
+                                <p>User testing compared the previous vs redesigned experience.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+ 
+            </div>
+        </section>
+ 
+ 
+        <!-- ======================================================= -->
+        <!-- DESIGN DECISIONS                                        -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-decisions">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Design decisions</span>
+                    <span class="cs-section__number">04</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Each decision focused on reducing cognitive load, improving hierarchy, and enabling faster access to key information.</h2>
+                    <p></p>
+                </div>
+ 
+            </div>
+ 
+            <!-- Grid de decisions -->
+            <div class="cs-decisions-grid">
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">A</div>
+                    <h3 class="cs-decision__title">Hero simplification</h3>
+                    <p class="cs-decision__body">The initial hero overwhelmed users with a long form. It was moved to the end, replacing it with a simple “Contact” CTA. Users first understand, then act.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__02.webp" type="image/webp">
+                            <img src="media/uninorte__02.jpg" alt="Academic program hero with simplified layout, clear call-to-action, and reduced visual clutter" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">B</div>
+                    <h3 class="cs-decision__title">Reducing cognitive load</h3>
+                    <p class="cs-decision__body">Multiple primary buttons created confusion. These were reduced to secondary actions, while pricing was shown upfront. Less noise, faster decisions.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__03.webp" type="image/webp">
+                            <img src="media/uninorte__03.jpg" alt="Program description section with improved hierarchy and clearer content organization" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">C</div>
+                    <h3 class="cs-decision__title">Professors section redesign</h3>
+                    <p class="cs-decision__body">The original grid created long vertical scrolling. It was redesigned as a horizontal carousel with quick summaries and access to full profiles. More scannable, less space.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__04.webp" type="image/webp">
+                            <img src="media/uninorte__04.jpg" alt="Professors section redesigned as a horizontal carousel for better scanability" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+                <article class="cs-decision">
+                    <div class="cs-decision__number">D</div>
+                    <h3 class="cs-decision__title">Curriculum structure redesign</h3>
+                    <p class="cs-decision__body">The curriculum didn’t scale well and felt disconnected from the rest of the page. It was redesigned using semester-based cards with horizontal navigation and a download option. Flexible, scalable, and easier to explore.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__05.webp" type="image/webp">
+                            <img src="media/uninorte__05.jpg" alt="Study plan displayed as horizontal semester cards with scalable structure" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+                <article class="cs-decision">
+                    <div class="cs-decision__number">E</div>
+                    <h3 class="cs-decision__title">Navigation optimization</h3>
+                    <p class="cs-decision__body">A section-based navigation was added to allow users to jump between key areas without excessive scrolling. Faster access to information.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__06.webp" type="image/webp">
+                            <img src="media/uninorte__06.jpg" alt="Website header with section-based navigation and mobile menu with hamburger interaction" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+                <article class="cs-decision">
+                    <div class="cs-decision__number">F</div>
+                    <h3 class="cs-decision__title">Responsive-first approach</h3>
+                    <p class="cs-decision__body">The entire system was designed to work seamlessly across devices, prioritizing mobile usability and component adaptability. Consistent experience everywhere.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/uninorte__07.webp" type="image/webp">
+                            <img src="media/uninorte__07.jpg" alt="Responsive design showing the academic program page across multiple mobile screens" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- RESULTADOS                                              -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-results">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Results</span>
+                    <span class="cs-section__number">05</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">What changed</h2>
+                    <p>The redesign created a clearer and more efficient experience, allowing users to access key information faster and with less effort</p>
+ 
+                    <!-- Métricas — Iconos -->
+                    <div class="cs-metrics">
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-hand-heart-line"></i></span>
+                            <span class="cs-metric__label">Interactions became easier and more intuitive.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-speed-up-line"></i></span>
+                            <span class="cs-metric__label">Users found key content significantly quicker.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-brain-line"></i></span>
+                            <span class="cs-metric__label">Cleaner structure improved understanding.</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-layout-grid-line"></i></span>
+                            <span class="cs-metric__label">The design works across all programs.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- REFLECTION                                              -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-reflection">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Reflection</span>
+                    <span class="cs-section__number">06</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">What I'd do differently</h2>
+                    <p class="cs-lead">This project taught me how to organize large amounts of content around real user priorities.</p>
+                    <p>Instead of focusing on visual changes, most decisions were about structure, hierarchy, and clarity. The challenge was not adding more, but removing friction. Working within Liferay also pushed me to design more systematically, ensuring that every solution was both usable and scalable.</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- NAVIGATION BETWEEN PROJECTS                             -->
+        <!-- ======================================================= -->
+        <nav class="cs-nav" aria-label="More projects">
+            <a href="project__backoffice.html" title="Go to previous project" class="cs-nav__prev">
+                <span class="cs-nav__direction"><i class="ri-arrow-left-line"></i>Previous</span>
+                <span class="cs-nav__project-name">Backoffice 4.0</span>
+            </a>
+            <a href="project__e-cargo.html" title="Go to next project" class="cs-nav__next">
+                <span class="cs-nav__direction">Next <i class="ri-arrow-right-line"></i></span>
+                <span class="cs-nav__project-name">E-cargo</span>
+            </a>
+        </nav>
+ 
+    </main>
+ 
+    <!-- ======================================================= -->
+    <!-- Footer                                                  -->
+    <!-- ======================================================= -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Jaime Martin. All rights reserved.</p>
+    </footer>
+ 
+</body>
+</html>

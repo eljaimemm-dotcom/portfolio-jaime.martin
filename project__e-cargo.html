@@ -1,0 +1,403 @@
+<!--
+Descripcion: Este archivo contiene el codigo html del proyecto E-cargo
+Estructura general:
+-Header
+-Hero
+-Context
+-Problem
+-Process
+-Design Decisions
+-Results
+-Reflection
+-Navigation between projects
+-Footer
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>E-Cargo Logistics</title>
+
+    <!-- Links y JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+    <link rel='stylesheet' href='css/main.css'>
+    <script src="js/main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="E-Cargo — Complex Logistics UX/UI Case Study | Jaime Martin" />
+    <meta name="description" content="UX/UI case study of a logistics platform redesign focused on simplifying complex workflows, improving clarity, and enhancing system usability." />
+    <meta name="author" content="Jaime Martin" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="og:title" content="E-Cargo — Complex Logistics UX/UI Case Study | Jaime Martin" />
+    <meta property="og:description" content="UX/UI case study of a logistics platform redesign focused on simplifying complex workflows, improving clarity, and enhancing system usability." />
+    <meta property="og:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__e-cargo.jpg" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="twitter:title" content="E-Cargo — Complex Logistics UX/UI Case Study | Jaime Martin" />
+    <meta property="twitter:description" content="UX/UI case study of a logistics platform redesign focused on simplifying complex workflows, improving clarity, and enhancing system usability." />
+    <meta property="twitter:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__e-cargo.jpg" />
+
+</head>
+<body class="case-study-page">
+ 
+    <!-- ======================================================= -->
+    <!-- HEADER                                                  -->
+    <!-- ======================================================= -->    
+    <header class="header header--scrolled" id="cs-header">
+        <div class="header__brand">
+            <a href="index.html" title="Go back to the main page" class="cs-back">
+                <i class="ri-arrow-left-line"></i>
+                <span>JAIME MARTIN</span>
+            </a>
+        </div>
+        <div class="header__content">
+            <a class="cs-header__label" href="#" title="Go to the top">E-Cargo</a>
+        </div>
+    </header>
+ 
+    <main>
+ 
+        <!-- ======================================================= -->
+        <!-- HERO                                                    -->
+        <!-- ======================================================= -->
+        <section class="cs-hero">
+ 
+            <!-- Categorias -->
+            <div class="cs-hero__meta">
+                <div class="cs-hero__tags">
+                    <span class="cs-tag">Logistics</span>
+                    <span class="cs-tag">B2B Platform</span>
+                    <span class="cs-tag">Multi-Sided System</span>
+                </div>
+            </div>
+ 
+            <!-- Título principal -->
+            <h1 class="cs-hero__title">
+                <span class="cs-hero__title-line cs-hero__title-line--1">E-Cargo</span>
+                <span class="cs-hero__title-line cs-hero__title-line--2">Logistics,<br><em>simplified.</em></span>
+            </h1>
+ 
+            <!-- Rol + año -->
+            <div class="cs-hero__info">
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">ROLE</span>
+                    <span class="cs-hero__info-value">UX/UI Designer</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">YEAR</span>
+                    <span class="cs-hero__info-value">2024</span>
+                </div>
+                <div class="cs-hero__info-item">
+                    <span class="cs-hero__info-label">COMPANY</span>
+                    <span class="cs-hero__info-value">Consware</span>
+                </div>
+            </div>
+ 
+            <!-- Imagen hero -->
+            <figure class="cs-hero__cover">
+                <picture>
+                    <source srcset="media/e-cargo__banner.webp" type="image/webp">
+                    <img
+                        src="media/e-cargo__banner.jpg"
+                        alt="UI screens from the e-cargo project showing the home, operations, and metrics sections"
+                        width="1600"
+                        height="900"
+                        loading="eager"
+                    >
+                </picture>
+            </figure>
+ 
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Context                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-context">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Context</span>
+                    <span class="cs-section__number">01</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">A platform for three different users</h2>
+                    <p class="cs-lead">This project was developed at Consware for a logistics company in Colombia. The goal was to design a digital platform to manage freight operations across multiple user roles within a highly complex system.</p>
+                    <p>The platform involved three main user types, each with different workflows and priorities. For this case study, I focus on the Cargo Generator role, where I had the most direct impact. The challenge was not only designing interfaces, but aligning business goals, technical constraints, and user experience in a system that was already complex and actively evolving.</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Problem                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-problem">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Problem</span>
+                    <span class="cs-section__number">02</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Complexity without structure</h2>
+                    <p class="cs-lead">The system required users to manage complex logistics operations, but lacked clarity, structure, and usability.</p>
+ 
+                    <!-- Cita de usuario -->
+                    <blockquote class="cs-quote">
+                        <p>“Managing shipments requires too many steps, and it’s easy to lose track of what’s going on.”</p>
+                        <cite>— Cargo Generator user</cite>
+                    </blockquote>
+ 
+                    <!-- Puntos de dolor -->
+                    <div class="cs-pain-points">
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-brain-line"></i></span>
+                            <h3>Cognitive overload</h3>
+                            <p>Users had to process too much information without clear prioritization.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-puzzle-line"></i></span>
+                            <h3>Fragmented workflows</h3>
+                            <p>Tasks were spread across multiple steps with no clear guidance.</p>
+                        </div>
+                        <div class="cs-pain-point">
+                            <span class="cs-pain-point__icon"><i class="ri-expand-horizontal-line"></i></span>
+                            <h3>Stakeholder misalignment</h3>
+                            <p>Business expectations, technical constraints, and user needs often conflicted.</p>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Process                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-process">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Process</span>
+                    <span class="cs-section__number">03</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Designing through constraint and iteration</h2>
+                    <p>The process was highly iterative and required constant alignment between stakeholders, developers, and design decisions. Rather than following a linear workflow, the project evolved through continuous feedback and refinement.</p>
+ 
+                    <!-- Timeline -->
+                    <ol class="cs-timeline">
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Stakeholder alignment</h3>
+                                <p>Frequent sessions with the client to validate business requirements and priorities.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Workflow simplification</h3>
+                                <p>Breaking down complex logistics processes into clearer, more structured user flows.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Design system development</h3>
+                                <p>Establishing reusable UI components and patterns to ensure consistency and speed across the product.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Iterative design cycles</h3>
+                                <p>Multiple UI iterations based on client feedback and evolving constraints.</p>
+                            </div>
+                        </li>
+                        <li class="cs-timeline__item">
+                            <div class="cs-timeline__marker"></div>
+                            <div class="cs-timeline__body">
+                                <h3>Developer collaboration</h3>
+                                <p>Close communication with developers to ensure feasibility and alignment with system capabilities.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- Imagen ancho completo -->
+        <figure class="cs-full-image">
+            <picture>
+                <source srcset="media/e-cargo__01.webp" type="image/webp">
+                <img
+                    src="media/e-cargo__01.jpg"
+                    alt="E-Cargo — wireframes to Final Screens (Log-in and Users sections)"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                >
+            </picture>
+            <figcaption>Wireframes for “Home” and “Users” sections</figcaption>
+        </figure>
+ 
+        <!-- ======================================================= -->
+        <!-- Design decisions                                        -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-decisions">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Design decisions</span>
+                    <span class="cs-section__number">04</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Structuring complexity instead of removing it</h2>
+                    <p></p>
+                </div>
+ 
+            </div>
+ 
+            <!-- Grid decisions -->
+            <div class="cs-decisions-grid">
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">A</div>
+                    <h3 class="cs-decision__title">Guided workflows</h3>
+                    <p class="cs-decision__body">Instead of exposing all complexity at once, tasks were structured into guided steps to reduce cognitive load.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/e-cargo__02.webp" type="image/webp">
+                            <img src="media/e-cargo__02.jpg" alt="e-cargo screen showing the process of tracking an operation" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">B</div>
+                    <h3 class="cs-decision__title">Clear hierarchy</h3>
+                    <p class="cs-decision__body">The interface was structured to guide attention through clear visual hierarchy. Primary actions, such as creating a new request, are prominently displayed, while operational data is organized into scannable sections that allow users to quickly understand system status and prioritize tasks.</p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/e-cargo__04.webp" type="image/webp">
+                            <img src="media/e-cargo__04.jpg" alt="e-cargo home interface" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+ 
+                <article class="cs-decision">
+                    <div class="cs-decision__number">C</div>
+                    <h3 class="cs-decision__title">System consistency</h3>
+                    <p class="cs-decision__body">A shared design system was introduced to ensure consistency across a complex multi-role platform. Reusable components and patterns allowed the interface to scale while maintaining clarity and coherence..<p>
+                    <figure class="cs-decision__image">
+                        <picture>
+                            <source srcset="media/e-cargo__03.webp" type="image/webp">
+                            <img src="media/e-cargo__03.jpg" alt="e-cargo component library" width="800" height="500" loading="lazy">
+                        </picture>
+                    </figure>
+                </article>
+
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Results                                                 -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-results">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Results</span>
+                    <span class="cs-section__number">05</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">What changed</h2>
+                    <p>The redesign introduced a more structured and understandable experience, helping users navigate complex workflows with greater confidence. Feedback from internal teams highlighted improvements in usability, especially in how tasks were organized and prioritized within the Cargo Generator flow.</p>
+ 
+                    <!-- Métricas — Iconos -->
+                    <div class="cs-metrics">
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-focus-3-line"></i></span>
+                            <span class="cs-metric__label">Improved task clarity</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-route-line"></i></span>
+                            <span class="cs-metric__label">Better structured workflows</span>
+                        </div>
+                        <div class="cs-metric">
+                            <span class="cs-metric__value"><i class="ri-mental-health-line"></i></span>
+                            <span class="cs-metric__label">Reduced cognitive load</span>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Reflection                                              -->
+        <!-- ======================================================= -->
+        <section class="cs-section cs-reflection">
+            <div class="cs-section__inner">
+ 
+                <div class="cs-section__label-col">
+                    <span class="cs-eyebrow">Reflection</span>
+                    <span class="cs-section__number">06</span>
+                </div>
+ 
+                <div class="cs-section__content-col">
+                    <h2 class="cs-section__heading">Designing beyond ideal scenarios</h2>
+                    <p class="cs-lead">This project reinforced the importance of designing within real-world constraints — balancing business goals, technical limitations, and user experience.</p>
+                    <p>Working on multiple projects simultaneously required adaptability and prioritization, influencing how decisions were made. If I approached this project again, I would validate user assumptions earlier in the process to reduce iteration cycles later on.</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ======================================================= -->
+        <!-- Navigation between projects                             -->
+        <!-- ======================================================= -->
+        <nav class="cs-nav" aria-label="More projects">
+            <a href="project__uninorte-pages.html" title="Go to previous project" class="cs-nav__prev">
+                <span class="cs-nav__direction"><i class="ri-arrow-left-line"></i> Previous</span>
+                <span class="cs-nav__project-name">Uninorte Program Pages</span>
+            </a>
+            <a href="project__backoffice.html" title="Go to next project" class="cs-nav__next">
+                <span class="cs-nav__direction">Next <i class="ri-arrow-right-line"></i></span>
+                <span class="cs-nav__project-name">Backoffice 4.0</span>
+            </a>
+        </nav>
+ 
+    </main>
+    
+    <!-- ======================================================= -->
+    <!-- Footer                                                  -->
+    <!-- ======================================================= -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Jaime Martin. All rights reserved.</p>
+    </footer>
+ 
+</body>
+</html>

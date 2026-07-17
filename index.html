@@ -1,3 +1,14 @@
+<!--
+Descripcion: Este archivo contiene el código HTML principal de mi portfolio personal 
+Estructura general:
+-Header
+-Hero
+-Selected Projects
+-About
+-Contact
+-Footer
+-->
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -5,75 +16,447 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Jaime Martin's Portfolio</title>
 
+    <!-- Links y JS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
     <link rel='stylesheet' href='css/main.css'>
     <script src="js/main.js" defer></script>
 
+    <!-- Favicons -->
+    <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Jaime Martin's Portfolio" />
-    <meta name="description" content="Jaime Martin's portfolio" />
+    <meta name="title" content="Jaime Martin | UX/UI Designer Portfolio" />
+    <meta name="description" content="UX/UI Designer focused on creating clear, scalable, and user-centered digital experiences. Portfolio featuring real-world projects in UX, UI, and web design." />
+    <meta name="author" content="Jaime Martin" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://metatags.io/" />
-    <meta property="og:title" content="Jaime Martin's Portfolio" />
-    <meta property="og:description" content="Jaime Martin's portfolio" />
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta property="og:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="og:title" content="Jaime Martin | UX/UI Designer Portfolio" />
+    <meta property="og:description" content="UX/UI Designer and Frontend Developer." />
+    <meta property="og:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__home.jpg" />
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://metatags.io/" />
-    <meta property="twitter:title" content="Jaime Martin's Portfolio" />
-    <meta property="twitter:description" content="Jaime Martin's portfolio" />
-    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta property="twitter:url" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/" />
+    <meta property="twitter:title" content="Jaime Martin | UX/UI Designer Portfolio" />
+    <meta property="twitter:description" content="UX/UI Designer and Frontend Developer." />
+    <meta property="twitter:image" content="https://eljaimemm-dotcom.github.io/portfolio-jaime.martin/media/og__home.jpg" />
 
 </head>
 <body>
- 
-    <header class="header">
-        <span href="#" class="header__logo">JAIME MARTIN</span>
-        <div class="header__content">
-            <nav id="header__nav" class="header__nav no-mobile">
-                <button id="menu-close" class="no-desktop"><i class="ri-close-large-line"></i> </button>
-                <ul class="header__nav-links">
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </nav>
-            <button class=" header__btn btn-secondary">HIRE ME</button>
-            <button id="menu-toggle" class="no-desktop"><i class="ri-menu-line"></i></button>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero__content">
-                <div class="hero__top">
-                    <span class="hero__linea"></span>
-                    <span>UX/UI DESIGNER WITH FRONTEND SKILS</span>
+
+<!-- ======================================================= -->
+<!-- HEADER                                                  -->
+<!-- ======================================================= -->
+<header class="header">
+    <div class="header__brand animate-hidden animate-delay-4">
+        <a id="logo" title="Go to home" href="#home">JAIME MARTIN</a>
+    </div>
+
+    <div class="header__content animate-hidden animate-delay-4">
+
+        <!-- Menu -->
+         <nav id="header__nav" class="header__nav no-mobile">
+            <ul class="header__nav-links">
+                <li><a title="Go to work section" href="#work">WORK</a></li>
+                <li><a title="Go to about section" href="#about">ABOUT</a></li>
+                <li><a title="Go to contact section" href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- Fun Fact -->
+        <div class="fun-fact">
+            <svg class="fun-fact__ring" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                    <path id="fun-fact-circle" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
+                </defs>
+                <text>
+                    <textPath href="#fun-fact-circle" startOffset="0%">
+                        FUN FACT • FUN FACT • FUN FACT •
+                    </textPath>
+                </text>
+            </svg>
+
+            <button class="fun-fact__btn" type="button" title="Open fun fact card" aria-describedby="fun-fact-card">
+                <span aria-hidden="true">?</span>
+                <span class="visually-hidden">Fun fact about this site</span>
+            </button>
+            
+            <div class="fun-fact__card" id="fun-fact-card" role="tooltip">
+                <p class="fun-fact__label">
+                    <span class="fun-fact__dot" aria-hidden="true"></span>
+                    FUN FACT
+                </p>
+                <p class="fun-fact__text">
+                    This site was <strong>designed and developed</strong> by me — no templates, built from scratch using HTML, CSS and JavaScript.
+                </p>
+                <div class="fun-fact__signature">
+                    <span class="fun-fact__avatar" aria-hidden="true">JM</span>
+                    <span>JAIME MARTIN</span>
                 </div>
-                <h1 class="hero__h1">
-                    <span class="word-1">Functionality</span>
-                    <div>
-                        <span class="word-2">before</span>
-                        <span class="word-3">ego</span>
-                    </div>
-                </h1>
-                <p>I’m a big believer in not designing "pretty things" just for the sake of it or because of personal taste. It’s cool to think, "I’m the one who builds digital experiences that actually work for people."</p>
             </div>
-            <div class="hero__aside">
-                <span>JM</span>
-                <i class="ri-arrow-down-double-fill"></i>
+        </div>
+        
+        <button id="menu-toggle" title="Open menu" class="no-desktop">
+            <i class="ri-menu-line"></i>
+        </button>
+        
+    </div>
+</header>
+
+<!-- Menu mobile -->
+<nav id="mobile-menu" class="header__nav-mobile no-desktop">
+
+    <button id="mobile-menu-close" title="Close menu" class="no-desktop">
+        <i class="ri-close-large-line"></i>
+    </button>
+
+    <ul class="header__nav-links">
+        <li><a title="Go to work section" href="#work">WORK</a></li>
+        <li><a title="Go to about section" href="#about">ABOUT</a></li>
+        <li><a title="Go to contact section" href="#contact">CONTACT</a></li>
+    </ul>
+
+</nav>
+
+<main>
+    
+    <!-- ======================================================= -->
+    <!-- HERO                                                      -->
+    <!-- ======================================================= -->
+    <section class="hero" id="home">
+        <div class="hero__content">
+            <div class="hero__top animate-hidden animate-delay-4">
+                <span class="hero__line"></span>
+                <span>UX/UI DESIGNER WITH FRONTEND SKILLS</span>
+            </div>
+            <h1 class="hero__heading">
+                <span class="hero__word hero__word--primary animate-hidden-up animate-delay-1 ">Functionality</span>
+                <div class="hero__word-group ">
+                    <span class="hero__word hero__word--italic animate-hidden-up animate-delay-2">before</span>
+                    <span class="hero__word hero__word--muted animate-hidden-up animate-delay-3">ego</span>
+                </div>
+            </h1>
+            <p class="hero__description animate-hidden animate-delay-4">I'm a big believer in not designing "pretty things" just for the sake of it or because of personal taste. It's cool to think, "I'm the one who builds digital experiences that actually work for people."</p>
+        </div>
+        <div class="hero__aside animate-hidden animate-delay-4">
+            <span></span>
+            <i class="ri-arrow-down-double-fill" aria-hidden="true"></i>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- SELECTED PROJECTS                                         -->
+    <!-- ======================================================= -->
+    <section class="selected" id="work" aria-label="Selected work">
+
+        <div class="selected__grid">
+
+            <!-- Texto del lado izquierdo -->
+            <div class="selected__sticky">
+
+                <div class="selected__intro">
+                    <span class="hero__line"></span>
+                    <h2>SELECTED WORK</h2>
+                </div>
+
+                <article class="selected__text selected__text--active" data-project="1">
+                    <h3>E-Cargo</h3>
+                    <p>A logistics platform connecting shippers, carriers and drivers to manage freight operations through a unified digital ecosystem.</p>
+                    <a class="btn-tertiary" title="View more details about E-Cargo" href="project__e-cargo.html">VIEW MORE<i class="ri-arrow-right-long-line" aria-hidden="true"></i></a>
+                </article>
+
+                <article class="selected__text" data-project="2">
+                    <h3>Backoffice 4.0</h3>
+                    <p>A back-office platform redesigned for payment terminals, helping gas station staff complete fueling operations more efficiently in real-world environments.</p>
+                    <a class="btn-tertiary" title="View more details about Backoffice 4.0"  href="project__backoffice.html">VIEW MORE<i class="ri-arrow-right-long-line" aria-hidden="true"></i></a>
+                </article>
+
+                <article class="selected__text" data-project="3">
+                    <h3>Uninorte Programs</h3>
+                    <p>A scalable redesign of academic program pages that helps prospective students explore educational offerings through a clearer and more consistent digital experience.</p>
+                    <a class="btn-tertiary" title="View more details about Uninorte Programs" href="project__uninorte-pages.html">VIEW MORE<i class="ri-arrow-right-long-line" aria-hidden="true"></i></a>
+                </article>
+
+                <ul class="selected__dots" aria-hidden="true">
+                    <li class="selected__dot selected__dot--active" data-dot="1"></li>
+                    <li class="selected__dot" data-dot="2"></li>
+                    <li class="selected__dot" data-dot="3"></li>
+                </ul>
 
             </div>
-        </section>
-    </main>
-    <footer>
 
-    </footer>
+            <!-- Imagenes del lado derecho -->
+            <div class="selected__scroll">
+
+                <figure class="selected__figure" data-project="1">
+                    <picture>
+                        <source srcset="media/selected-projects__e-cargo.webp" type="image/webp" >
+                        <img
+                            src="media/selected-projects__e-cargo.jpg"
+                            alt="UI screens from the e-cargo project showing the home, operations, and metrics sections"
+                            width="1200"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </picture>
+                    <figcaption class="selected__tags">
+                        <ul>
+                            <li>Logistics</li>
+                            <li>B2B Platform</li>
+                            <li>Multi-Sided System</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+                <figure class="selected__figure" data-project="2">
+                    <picture>
+                        <source srcset="media/selected-projects__backoffice.webp" type="image/webp">
+                        <img
+                            src="media/selected-projects__backoffice.jpg"
+                            alt="Backoffice 4.0 dashboard showing payment terminal interface"
+                            width="1200"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </picture>
+                    <figcaption class="selected__tags">
+                        <ul>
+                            <li>Device Adaptation</li>
+                            <li>Payment Terminals</li>
+                            <li>UX/UI Redesign</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+                <figure class="selected__figure" data-project="3">
+                    <picture>
+                        <source srcset="media/selected-projects__uninorte.webp" type="image/webp">
+                        <img
+                            src="media/selected-projects__uninorte.jpg"
+                            alt="Pages from the Uninorte program that display the homepage in both mobile and desktop versions"
+                            width="1200"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </picture>
+                    <figcaption class="selected__tags">
+                        <ul>
+                            <li>Web Experience</li>
+                            <li>Academic Platform</li>
+                            <li>Redesign</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- ABOUT                                                     -->
+    <!-- ======================================================= -->
+    <section class="about" id="about" aria-label="About me">
+
+        <div class="about__content">
+
+            <!-- Who I Am del lado izquierdo -->
+            <div class="about__who-i-am">
+                <div class="about__top">
+                    <span class="hero__line"></span>
+                    <h2>
+                        <span>WHO</span>
+                        <span class="about__highlight">I AM</span>
+                    </h2>
+                </div>
+                <p>I'm curious by nature and probably ask more questions than most people expect.
+                Understanding how something works, why it exists and how people use it is usually more interesting to me than making it look impressive.
+                That's what led me to UX/UI design and eventually to frontend development: the ability to connect ideas, users and technology into products that actually work.</p>
+            </div>
+
+            <!-- Tabs del lado derecho -->
+            <div class="about__aside">
+
+                <ul class="about__tabs" role="tablist">
+                    <li role="presentation">
+                        <button title="Show experience" class="about__tab about__tab--active" role="tab" aria-selected="true" aria-controls="panel-experience" id="tab-experience" data-tab="experience">EXPERIENCE</button>
+                    </li>
+                    <li role="presentation">
+                        <button title="Show education" class="about__tab" role="tab" aria-selected="false" aria-controls="panel-education" id="tab-education" data-tab="education">EDUCATION</button>
+                    </li>
+                    <li role="presentation">
+                        <button title="Show knowledge" class="about__tab" role="tab" aria-selected="false" aria-controls="panel-knowledge" id="tab-knowledge" data-tab="knowledge">KNOWLEDGE</button>
+                    </li>
+                </ul>
+
+                <div class="about__panel about__panel--active" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" data-panel="experience">
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>Web Designer (Contract)</h3>
+                            <span class="about__item-date">2026 — Present</span>
+                        </div>
+                        <p class="about__item-org">The Art Design Project</p>
+                        <p>Contribute to the continuous evolution of an e-commerce platform through UX/UI improvements, responsive design, SEO optimization and website performance enhancements.</p>
+                    </article>
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>UX/UI Designer</h3>
+                            <span class="about__item-date">2024</span>
+                        </div>
+                        <p class="about__item-org">Consware</p>
+                        <p>Designed enterprise software for the logistics industry, collaborating with developers and stakeholders to simplify complex workflows and improve usability across a multi-user platform.</p>
+                    </article>
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>UX/UI Designer</h3>
+                            <span class="about__item-date">2023</span>
+                        </div>
+                        <p class="about__item-org">Universidad del Norte</p>
+                        <p>Redesigned digital experiences for students, faculty and alumni while creating scalable templates that improved navigation, content discoverability and mobile usability.</p>
+                    </article>
+
+                </div>
+
+                <div class="about__panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" data-panel="education" hidden>
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>Master in UX/UI Design and Web Development</h3>
+                            <span class="about__item-date">2026</span>
+                        </div>
+                        <p class="about__item-org">CEI Madrid, Spain</p>
+                    </article>
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>Bachelor's Degree in Graphic Design</h3>
+                            <span class="about__item-date">2020 — 2023</span>
+                        </div>
+                        <p class="about__item-org">Universidad del Norte, Colombia</p>
+                    </article>
+
+                    <article class="about__item">
+                        <div class="about__item-head">
+                            <h3>Certification in UX/UI Design</h3>
+                            <span class="about__item-date">2023</span>
+                        </div>
+                        <p class="about__item-org">Coderhouse · Remote</p>
+                    </article>
+
+                </div>
+
+                <div class="about__panel" id="panel-knowledge" role="tabpanel" aria-labelledby="tab-knowledge" data-panel="knowledge" hidden>
+
+                    <ul class="about__skills">
+                        <li>Product Thinking</li>
+                        <li>Interaction Design</li>
+                        <li>Design Systems</li>
+                        <li>Frontend Development</li>
+                        <li>Responsive Design</li>
+                        <li>Information Architecture</li>
+                        <li>Usability</li>
+                        <li>Accessibility</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Loop de Iconos -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+             <defs>
+                <symbol id="icon-figma" viewBox="0 0 24 24"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></symbol>
+                <symbol id="icon-framer" viewBox="0 0 24 24"><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></symbol>
+                <symbol id="icon-html5" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></symbol>
+                <symbol id="icon-css" viewBox="0 0 24 24"><path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/></symbol>
+                <symbol id="icon-javascript" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></symbol>
+                <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+                <symbol id="icon-webflow" viewBox="0 0 24 24"><path d="m24 4.515-7.658 14.97H9.149l3.205-6.204h-.144C9.566 16.713 5.621 18.973 0 19.485v-6.118s3.596-.213 5.71-2.435H0V4.515h6.417v5.278l.144-.001 2.622-5.277h4.854v5.244h.144l2.72-5.244H24Z"/></symbol>
+                <symbol id="icon-wix" viewBox="0 0 24 24"><path d="m0 7.354 2.113 9.292h.801a1.54 1.54 0 0 0 1.506-1.218l1.351-6.34a.171.171 0 0 1 .167-.137c.08 0 .15.058.167.137l1.352 6.34a1.54 1.54 0 0 0 1.506 1.218h.805l2.113-9.292h-.565c-.62 0-1.159.43-1.296 1.035l-1.26 5.545-1.106-5.176a1.76 1.76 0 0 0-2.19-1.324c-.639.176-1.113.716-1.251 1.365l-1.094 5.127-1.26-5.537A1.33 1.33 0 0 0 .563 7.354H0zm13.992 0a.951.951 0 0 0-.951.95v8.342h.635a.952.952 0 0 0 .951-.95V7.353h-.635zm1.778 0 3.158 4.66-3.14 4.632h1.325c.368 0 .712-.181.918-.486l1.756-2.59a.12.12 0 0 1 .197 0l1.754 2.59c.206.305.55.486.918.486h1.326l-3.14-4.632L24 7.354h-1.326c-.368 0-.712.181-.918.486l-1.772 2.617a.12.12 0 0 1-.197 0L18.014 7.84a1.108 1.108 0 0 0-.918-.486H15.77z"/></symbol>
+                <symbol id="icon-claude" viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+                <symbol id="icon-gemini" viewBox="0 0 24 24"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+                <symbol id="icon-notion" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+                <symbol id="icon-asana" viewBox="0 0 24 24"><path d="M18.78 12.653c-2.882 0-5.22 2.336-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.34 5.22-5.22-2.336-5.22-5.22-5.22zm-13.56 0c-2.88 0-5.22 2.337-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.338 5.22-5.22-2.336-5.22-5.22-5.22zm12-6.525c0 2.883-2.337 5.22-5.22 5.22-2.882 0-5.22-2.337-5.22-5.22 0-2.88 2.338-5.22 5.22-5.22 2.883 0 5.22 2.34 5.22 5.22z"/></symbol>
+            </defs>
+        </svg>
+        <div class="about__tools" aria-label="Tools I use">
+            <ul class="about__tools-track">
+                <li><svg role="img" aria-labelledby="icon-title-figma"><title id="icon-title-figma">Figma</title><use href="#icon-figma"></use></svg><span>Figma</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-framer"><title id="icon-title-framer">Framer</title><use href="#icon-framer"></use></svg><span>Framer</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-html5"><title id="icon-title-html5">HTML5</title><use href="#icon-html5"></use></svg><span>HTML</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-css"><title id="icon-title-css">CSS</title><use href="#icon-css"></use></svg><span>CSS</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-javascript"><title id="icon-title-javascript">JavaScript</title><use href="#icon-javascript"></use></svg><span>JavaScript</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-github"><title id="icon-title-github">GitHub</title><use href="#icon-github"></use></svg><span>GitHub</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-webflow"><title id="icon-title-webflow">Webflow</title><use href="#icon-webflow"></use></svg><span>Webflow</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-wix"><title id="icon-title-wix">Wix</title><use href="#icon-wix"></use></svg><span>Wix</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-claude"><title id="icon-title-claude">Claude</title><use href="#icon-claude"></use></svg><span>Claude</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-gemini"><title id="icon-title-gemini">Google Gemini</title><use href="#icon-gemini"></use></svg><span>Gemini</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-notion"><title id="icon-title-notion">Notion</title><use href="#icon-notion"></use></svg><span>Notion</span></li>
+                <li><svg role="img" aria-labelledby="icon-title-asana"><title id="icon-title-asana">Asana</title><use href="#icon-asana"></use></svg><span>Asana</span></li>
+
+                <li aria-hidden="true"><svg role="img"><use href="#icon-figma"></use></svg><span>Figma</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-framer"></use></svg><span>Framer</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-html5"></use></svg><span>HTML</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-css"></use></svg><span>CSS</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-javascript"></use></svg><span>JavaScript</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-github"></use></svg><span>GitHub</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-webflow"></use></svg><span>Webflow</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-wix"></use></svg><span>Wix</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-claude"></use></svg><span>Claude</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-gemini"></use></svg><span>Gemini</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-notion"></use></svg><span>Notion</span></li>
+                <li aria-hidden="true"><svg role="img"><use href="#icon-asana"></use></svg><span>Asana</span></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- CONTACT                                                   -->
+    <!-- ======================================================= -->
+    <section class="contact" id="contact" aria-label="Contact">
+
+        <div class="contact__top">
+            <span class="hero__line"></span>
+            <h2>GET IN TOUCH</h2>
+        </div>
+
+            <h3 class="contact__heading"><span>Let's build something</span><span>that actually works.</span></h3>
+
+        <p>Open to freelance projects, full-time roles, or just a good conversation about design and code.</p>
+
+        <div class="contact__actions">
+            <a class="btn-primary" title="Send me an email" href="#">
+                SEND ME AN EMAIL
+            </a>
+            <a class="btn-secondary" title="View my LinkedIn profile" href="https://www.linkedin.com/in/jmartinmunoz/" target="_blank" rel="noopener noreferrer">
+                LINKEDIN
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ======================================================= -->
+<!-- FOOTER                                                  -->
+<!-- ======================================================= -->
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Jaime Martin. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
