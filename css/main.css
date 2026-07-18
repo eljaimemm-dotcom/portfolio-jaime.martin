@@ -132,8 +132,6 @@ Estructura general:
     --primary-color: #D4F244;
     --primary-color-hover: #C0DB3E;
     --primary-color-low-opacity: #d5f24435;
-    --secondary-color: #93C5FD;
-    --tertiary-color: #6EE7B7;
 
     /* Fonts */
     --text-xl: normal normal 400 normal clamp(1.5em, 8vw, 3em) normal, "Playfair Display", serif;
@@ -469,7 +467,7 @@ li { list-style: none; }
     opacity: 0;
     pointer-events: none;
     transform: translateY(-100%);
-    transition: all .3s ease;
+    transition: opacity .3s ease, transform .3s ease, pointer-events .3s ease;
 }
 
 .header__nav-mobile--open {
@@ -692,7 +690,6 @@ li { list-style: none; }
    ========================================= */
 .hero {
     display: flex;
-    justify-content: space-between;
     padding: 8rem clamp(1rem, 6.5vw, 4rem) 5rem;
 
     & p {
@@ -748,18 +745,6 @@ li { list-style: none; }
     font: var(--text-xl);
     font-weight: 500;
     color: var(--gray-100);
-}
-
-.hero__aside {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
-
-    & i {
-        color: var(--gray-200);
-        animation: hero-bounce 2s infinite;
-    }
 }
 
 @keyframes hero-bounce {
